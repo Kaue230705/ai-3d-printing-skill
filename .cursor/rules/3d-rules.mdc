@@ -1,0 +1,8 @@
+---
+description: Regras para modelagem e impressão 3D FDM
+globs: "*.scad, *.py"
+---
+Ao gerar ou modificar arquivos OpenSCAD ou scripts em Blender Python (bpy):
+1. Leia e aplique estritamente as especificações do arquivo `SKILL.md` localizado na raiz.
+2. Certifique-se de aplicar a folga/tolerância correta para encaixes FDM (0.25mm por padrão).
+3. Inclua comentários detalhados explicando cada parâmetro configurável.
