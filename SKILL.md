@@ -17,3 +17,7 @@
   - M4: Usar diÃ¢metro de `4.2mm`
   - M5: Usar diÃ¢metro de `5.2mm`
 - **Overhangs:** Limite mÃ¡ximo de inclinaÃ§Ã£o sem suporte a `45Â°`.
+## Regras Críticas de Modelagem Geométrica e Topologia
+- **União Obrigatória (Manifold):** Todos os componentes (hub central, braços, pesos) DEVEM se sobrepor fisicamente em pelo menos 2.0mm antes de aplicar operações Booleanas (union no OpenSCAD ou ool_op = 'UNION' no Blender).
+- **Fusão de Malha:** Em scripts Blender (py), aplique explicitamente o modificador BOOLEAN com a opção UNION ou execute py.ops.object.join().
+- **Geometria Unificada:** O ponto de origem dos braços deve ter distância menor que o raio do hub central (distancia_centro <= raio_hub - 1.0mm) para evitar peças flutuando separadas.
